@@ -1,0 +1,13 @@
+<h2>Company details</h2>
+
+<table border="1">
+    <thead>
+        <th>No.</th>
+        <th>Name</th>
+    </thead>
+
+    <tr *ngFor = "let company of companiesarr">
+        <td>{{company.id}}</td>
+        <td>{{company.name}}</td>
+    </tr>
+</table>
