@@ -4,13 +4,15 @@ import { AddCompanyComponent } from './components/add-company/add-company.compon
 import { CompaniesComponent } from './components/companies/companies.component';
 import { LoginComponent } from './components/login/login.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 const routes: Routes = [
   { path : '', component : LoginComponent },
   { path : 'login', component : LoginComponent },
   { path : 'addCompany', component :  AddCompanyComponent},
   { path : 'viewCompanies', component :  CompaniesComponent},
-  { path : "*", component : PageNotFoundComponent}
+  { path : "*", component : PageNotFoundComponent},
+  { path : 'navbar', component : NavbarComponent}
 ];
 
 @NgModule({
