@@ -1,28 +1,39 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule, routingComponents } from './app-routing.module';
 
 import { AppComponent } from './app.component';
-import { LoginComponent } from './components/login/login.component';
+
 
 import { CompanyService } from './services/company.service';
 import { UserService } from './services/user.service';
-import { CompaniesComponent } from './components/companies/companies.component';
-import { CurrentuserComponent } from './components/currentuser/currentuser.component';
+
+import { FormsModule } from '@angular/forms';
+import { AddPlacementDriveComponent } from './components/add-placement-drive/add-placement-drive.component';
+import { PlacementDrivesComponent } from './components/placement-drives/placement-drives.component';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
-    CompaniesComponent,
-    CurrentuserComponent
+    routingComponents,
+    AddPlacementDriveComponent,
+    PlacementDrivesComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [UserService, CompanyService],
-  bootstrap: [AppComponent]
+  providers: [
+    UserService,
+    CompanyService
+  ],
+  bootstrap: [
+    AppComponent
+  ]
 })
 export class AppModule { }

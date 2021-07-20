@@ -1,2 +1,9 @@
-<p>login works!</p>
+<h3>Email</h3>
+<input #email [(ngModel)] = "name" type="text">
+<br>{{name}}
+<h4>Password</h4>
+<input #pword [(ngModel)] = "password" type="password">
+<br>{{password}}
+<br><br>
 
+<button (click) = "validatemail(email.value)">Log in</button>
