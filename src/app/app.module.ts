@@ -8,16 +8,15 @@ import { FormsModule } from '@angular/forms';
 import { AddPlacementDriveComponent } from './components/add-placement-drive/add-placement-drive.component';
 import { PlacementDrivesComponent } from './components/placement-drives/placement-drives.component';
 import { HttpClientModule } from '@angular/common/http';
-import { NavbarComponent } from './navbar/navbar.component';
+import { CompanyDetailsComponent } from './components/company-details/company-details.component';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
     routingComponents,
-    AddPlacementDriveComponent,
-    PlacementDrivesComponent,
-    NavbarComponent
+    CompanyDetailsComponent
   ],
   imports: [
     BrowserModule,

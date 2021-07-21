@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ICompany } from 'src/app/model/company';
 import { CompanyService } from 'src/app/services/company.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-companies',
@@ -8,12 +10,18 @@ import { CompanyService } from 'src/app/services/company.service';
 })
 export class CompaniesComponent implements OnInit {
 
-  public companiesarr: { id: number; name: string; }[] | undefined;
+  companyArr? : ICompany[]; 
 
-  constructor(private companyService : CompanyService) { }
+  constructor(
+    private companyService : CompanyService, 
+    private router: Router) { }
 
   ngOnInit(): void {
-      this.companiesarr = this.companyService.getCompanies();
+      this.companyService.getCompanies().subscribe(response => this.companyArr=response);
+  }
+
+  onSelect(company : any){
+      this.router.navigate(['/viewCompanies', company.name])
   }
 
 }

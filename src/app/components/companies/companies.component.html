@@ -1,13 +1,13 @@
-<h2>Company details</h2>
+<h2>Companies</h2>
 
-<table border="1">
-    <thead>
-        <th>No.</th>
-        <th>Name</th>
-    </thead>
 
-    <tr *ngFor = "let company of companiesarr">
-        <td>{{company.id}}</td>
-        <td>{{company.name}}</td>
-    </tr>
-</table>
+<h2>click on company name, see url </h2><br>
+<ul>
+    <li (click) = onSelect(company) *ngFor = "let company of companyArr">
+        
+        {{company.name}}
+        
+        
+    </li>
+
+</ul>

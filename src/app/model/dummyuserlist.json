@@ -1,0 +1,16 @@
+[
+    {
+        "id" : 34,
+        "name" : "dhati",
+        "contact" : "1234456",
+        "mail" : "abc@c.in",
+        "password" : "passwd"
+    },
+    {
+        "id" : 36,
+        "name" : "dhati",
+        "contact" : "1234456",
+        "mail" : "abc@c.in",
+        "password" : "passwd"
+    }
+]
