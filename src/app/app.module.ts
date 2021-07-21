@@ -4,9 +4,7 @@ import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CompanyService } from './services/company.service';
 import { UserService } from './services/user.service';
-import { FormsModule } from '@angular/forms';
-import { AddPlacementDriveComponent } from './components/add-placement-drive/add-placement-drive.component';
-import { PlacementDrivesComponent } from './components/placement-drives/placement-drives.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { CompanyDetailsComponent } from './components/company-details/company-details.component';
 
@@ -22,7 +20,8 @@ import { CompanyDetailsComponent } from './components/company-details/company-de
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [
     UserService,

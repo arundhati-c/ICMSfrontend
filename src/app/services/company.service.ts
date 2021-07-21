@@ -10,34 +10,33 @@ export class CompanyService {
 
   constructor(private http:HttpClient) { }
 
-  private _url : string = "http://localhost:8085/Companies";
-
-  getCompanies1(){
-    return[
-      {"id" : 1, "name": "Citicorp", "website" : "www.citi.com",  "description" : "company description here"},
-      {"id" : 2, "name": "Cisco", "website" : "www.cisco.com","description" : "company description here"},
-    ]
-  }
+  private base_url : string = "http://localhost:8085";
+  _url? : string;
 
   getCompanies() : Observable<ICompany[]>{
-    return this.http.get<ICompany[]>(this._url);
-  }
-  
+    this._url = '/Companies';
+    //return this.http.get<ICompany[]>(this._url);
+    return this.http.get<ICompany[]>(this.base_url+this._url);
+  }  
 
-  getByName(name:String){
-    return this.http.get(`${this._url}/${name}`);
+  getByName(name:String) : Observable<ICompany>{
+    this._url = '/companies';
+    return this.http.get<ICompany>(`${this.base_url+this._url}/${name}`);
   }
 
   addCompany(c : ICompany):Observable<ICompany>{
-    return this.http.post<ICompany>(this._url, c);
+    this._url = '/new-company';
+    return this.http.post<ICompany>(this.base_url+this._url, c);
   }
 
   updateCompany(name:String, c:ICompany) : Observable<ICompany>{
-    return this.http.put<ICompany>('${this._url}/${name}', c);
+    this._url = '/companies';
+    return this.http.put<ICompany>(`${this.base_url+this._url}/${name}`, c);
   }
 
-  deleteCompany(name:string){
-
+  deleteCompany(name:string) : Observable<ICompany>{
+    this._url = '/companies';
+    return this.http.delete<ICompany>(`${this.base_url+this._url}/${name}`);
   }
   
 }

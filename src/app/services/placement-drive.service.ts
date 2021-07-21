@@ -10,25 +10,31 @@ export class PlacementDriveService {
 
   constructor(private http:HttpClient) { }
 
-  private _url : string = "";
+  private base_url : string = "http://localhost:8085";
+  _url? : string ;
 
   getDrives() : Observable<IPlacementDrive[]>{
-    return this.http.get<IPlacementDrive[]>(this._url);
+    this._url = '/drives';
+    return this.http.get<IPlacementDrive[]>(this.base_url+this._url);
   }
 
-  getById(id:number){
-
+  getById(id:number) : Observable<IPlacementDrive>{
+    this._url = '/drives';
+    return this.http.get<IPlacementDrive>(`${this.base_url+this._url}/${id}`);
   }
 
-  addPlacementDrive(c : IPlacementDrive):Observable<IPlacementDrive>{
-    return this.http.post<IPlacementDrive>(this._url, c);
+  addPlacementDrive(p : IPlacementDrive) : Observable<IPlacementDrive>{
+    this._url = '/new-drive';
+    return this.http.post<IPlacementDrive>(this._url, p);
   }
 
   updatePlacementDrive(name:String, p:IPlacementDrive) : Observable<IPlacementDrive>{
-    return this.http.put<IPlacementDrive>('${this._url}/${name}', p);
+    this._url = '/drives';
+    return this.http.put<IPlacementDrive>(`${this.base_url+this._url}/${name}`, p);
   }
 
   deletePlacementDrive(name:string){
-
+    this._url = '/drives';
+    return this.http.delete<IPlacementDrive>(`${this.base_url+this._url}/${name}`);
   }
 }

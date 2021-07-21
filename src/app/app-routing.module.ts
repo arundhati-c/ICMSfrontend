@@ -12,7 +12,6 @@ import { PlacementDrivesComponent } from './components/placement-drives/placemen
 
 
 const routes: Routes = [
-  { path : '', component : LoginComponent },
   { path : 'login', component : LoginComponent },
   { path : 'addCompany', component :  AddCompanyComponent},
   { path : 'viewCompanies', component :  CompaniesComponent},
@@ -20,6 +19,7 @@ const routes: Routes = [
   { path : 'addDrive', component : AddPlacementDriveComponent },
   { path : 'viewDrives', component : PlacementDrivesComponent },
   { path : 'navbar', component : NavbarComponent},
+  { path : '', component : LoginComponent },
   { path : "**", component : PageNotFoundComponent}  
 ];
 
