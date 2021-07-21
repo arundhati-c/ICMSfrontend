@@ -26,50 +26,42 @@
         <div id="collapseCompanyDetails" class="collapse show" data-parent="#accordionCompany">
           <!-- Card body start-->
           <div class="card-body">
-
             <div class="row form-group">
               <div class="col-sm-6">
                 <label for="inputCompanyName">Company Name</label>
                 <input type="text" formControlName="inputCompanyName" name="companyName" id="inputCompanyName"
                   placeholder="Company Name" class="form-control" />
-
-                <label for="inputCompanyCategory">Company Category</label>
-                <select class="custom-select mr-sm-2" name="CompanyCategory" formControlName="inputCompanyCategory"
-                  id="inputCompanyCategory">
-                  <option value="computerScience">Computer Science</option>
-                  <option value="Mechanical">Mechanical</option>
-                </select>
               </div>
             </div>
-            <div class="col-sm-6">
-              <label for="inputRequirementDescription">Requirement Description</label>
-              <textarea name="requirementDescription"
-                  formControlName="inputRequirementDescription" id="inputRequirementDescription"
-                  class="form-control " placeholder="Requirement Description" rows="2">
+            <div class="row form-group">
+              <div class="col-sm-6">
+                <label for="inputRequirementDescription">Requirement Description</label>
+                <textarea name="requirementDescription" formControlName="inputRequirementDescription"
+                  id="inputRequirementDescription" class="form-control " placeholder="Requirement Description" rows="2">
               </textarea>
-          </div>
-            <div class="row mt-2">
-              <div class="col-sm-6">
-                <button type="submit" class="btn btn-primary btn-block">
-                  <span class="spinner-border spinner-border-sm">Add Company</span>
-                </button>
               </div>
-              <div class="col-sm-6">
-                <button type="reset" class="btn btn-danger btn-block">
-                  Reset
-                </button>
-              </div>
+              <div class="row">
+                <div class="col-sm-6">
+                    <button type="submit" class="btn btn-primary btn-block">
+                        Add Company
+                    </button>
+                </div>
+                <div class="col-sm-6">
+                    <button type="reset" class="btn btn-danger btn-block">
+                        Reset
+                    </button>
+                </div>
             </div>
+            </div>
+            <!-- Card body end-->
           </div>
-          <!-- Card body end-->
+          <!-- Collapse body end-->
         </div>
-        <!-- Collapse body end-->
+        <!--form group end-->
       </div>
-      <!--form group end-->
+      <!-- Accordion Company Details card end-->
     </div>
-    <!-- Accordion Company Details card end-->
+    <!-- Accordian Company Details end-->
+    <!-- Page Body end -->
   </div>
-  <!-- Accordian Company Details end-->
-  <!-- Page Body end -->
-</div>
-<!-- Page End -->
+  <!-- Page End -->
