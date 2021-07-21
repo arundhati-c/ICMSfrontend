@@ -1,1 +1,113 @@
-<p>add-placement-drive works!</p>
+<!-- Page Start -->
+<div class="container">
+
+  <!-- Page Title Start -->
+  <div class="row">
+      <div class="col-sm-12">
+          <h1>Enter Job Details</h1>
+          <p class="hint-text">Please fill the required job details information.</p>
+      </div>
+  </div>
+  <!-- Page Title End -->
+
+  <!-- Page Body Start -->
+
+  <form>
+      <!-- Accordion Company Details start -->
+      <div class="accordion md-accordion" id="accordionCompany">
+          <!-- Accordion Company Details card start-->
+          <div class="card">
+              <div class="form-group">
+                  <!-- Card header start -->
+                  <div class="card-header" id="headingCompanyDetails">
+                      <a data-toggle="collapse" data-parent="#accordionCompany" href="#collapseCompanyDetails">
+                          <h4>Company Details</h4>
+                      </a>
+                  </div>
+                  <!-- Card header end -->
+
+                  <!-- Collapse Body start-->
+                  <div id="collapseCompanyDetails" class="collapse show" data-parent="#accordionCompany">
+                      <!-- Card body start-->
+                      <div class="card-body">
+
+                        <div class="row form-group">
+                          <div class="col-sm-6">
+                              <label for="inputJobTitle">Job Title</label>
+                              <input type="text" formControlName="inputJobTitle" name="jobTitle"
+                                  id="inputJobTitle" placeholder="Job Title" class="form-control"/>
+                          </div>
+                              <!-- <div class="col-sm-6">
+                                  <label for="inputEmploymentType">Employment Type</label>
+                                  <select class="custom-select mr-sm-2" name="employmentType"
+                                      formControlName="inputEmploymentType" id="inputEmploymentType">
+                                      <option value="ABC">ABCD</option>
+                                  </select>
+                              </div>
+                          </div> -->
+
+                          <div class="row form-group">
+                              <!-- <div class="col-sm-6">
+                                  <label for="inputCompanyCategory">Company Category</label>
+                                  <select class="custom-select mr-sm-2" name="CompanyCategory"
+                                      formControlName="inputCompanyCategory" id="inputCompanyCategory">
+                                      <option value="Agriculture">Agriculture, Plantation & Other Rural Sectors
+                                      </option>
+                                      <option value="Metal">Basic Metal Production</option>
+                                      <option value="TransportEquipment">Transport Equipment Manufacturing</option>
+                                  </select>
+                              </div> -->
+                              <div class="col-sm-6">
+                                  <label for="inputLocation">Location</label>
+                                  <input type="text" formControlName="inputLocation" name="Location" placeholder="Location"
+                                      id="inputLocation" class="form-control"/>
+                              </div>
+                          </div>
+                            <div class="row form-group">
+                              <div class="col-sm-6">
+                                  <label for="inputStipend">Stipend</label>
+                                  <input type="text" formControlName="inputStipend" name="StipendIN"
+                                      placeholder="Stipend" id="inputStipend" class="form-control"/>
+                              </div>
+                              <div class="col-sm-6">
+                                  <label for="inputJobDescription">Job Description</label>
+                                  <textarea name="jobDescription"
+                                      formControlName="inputJobDescription" id="inputJobDescription"
+                                      class="form-control " placeholder="Job Description" rows="2">
+                                  </textarea>
+                              </div>
+                          </div>
+
+                          <div class="row mt-2">
+                              <div class="col-sm-6">
+                                  <button type="submit" class="btn btn-primary btn-block">
+                                      Add Drive
+                                  </button>
+                              </div>
+                              <div class="col-sm-6">
+                                  <button type="reset" class="btn btn-danger btn-block">
+                                      Reset
+                                  </button>
+                              </div>
+                          </div>
+
+                      </div>
+                      <!-- Card body end-->
+                  </div>
+                  <!-- Collapse body end-->
+
+              </div>
+              <!--form group end-->
+          </div>
+          <!-- Accordion Company Details card end-->
+
+      </div>
+      <!-- Accordian Company Details end-->
+  <!-- </form> -->
+
+  <!-- Page Body end -->
+
+
+
+</div>
+<!-- Page End -->
