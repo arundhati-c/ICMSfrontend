@@ -32,37 +32,18 @@
                       <div class="card-body">
 
                         <div class="row form-group">
-                          <div class="col-sm-6">
-                              <label for="inputJobTitle">Job Title</label>
-                              <input type="text" formControlName="inputJobTitle" name="jobTitle"
-                                  id="inputJobTitle" placeholder="Job Title" class="form-control"/>
-                          </div>
-                              <!-- <div class="col-sm-6">
-                                  <label for="inputEmploymentType">Employment Type</label>
-                                  <select class="custom-select mr-sm-2" name="employmentType"
-                                      formControlName="inputEmploymentType" id="inputEmploymentType">
-                                      <option value="ABC">ABCD</option>
-                                  </select>
-                              </div>
-                          </div> -->
-
-                          <div class="row form-group">
-                              <!-- <div class="col-sm-6">
-                                  <label for="inputCompanyCategory">Company Category</label>
-                                  <select class="custom-select mr-sm-2" name="CompanyCategory"
-                                      formControlName="inputCompanyCategory" id="inputCompanyCategory">
-                                      <option value="Agriculture">Agriculture, Plantation & Other Rural Sectors
-                                      </option>
-                                      <option value="Metal">Basic Metal Production</option>
-                                      <option value="TransportEquipment">Transport Equipment Manufacturing</option>
-                                  </select>
-                              </div> -->
-                              <div class="col-sm-6">
-                                  <label for="inputLocation">Location</label>
-                                  <input type="text" formControlName="inputLocation" name="Location" placeholder="Location"
-                                      id="inputLocation" class="form-control"/>
-                              </div>
-                          </div>
+                            <div class="row form-group">
+                                <div class="col-sm-6">
+                                    <label for="inputTitle">Job Title</label>
+                                    <input type="text" formControlName="inputTitle" name="TitleIN"
+                                        placeholder="Job Title" id="inputTitle" class="form-control"/>
+                                </div>
+                                <div class="col-sm-6">
+                                    <label for="inputType">Employment Type</label>
+                                    <input type="text" formControlName="inputType" name="TypeIN"
+                                        placeholder="Employment Type" id="inputType" class="form-control"/>
+                                </div>
+                            </div>
                             <div class="row form-group">
                               <div class="col-sm-6">
                                   <label for="inputStipend">Stipend</label>
@@ -77,19 +58,81 @@
                                   </textarea>
                               </div>
                           </div>
+                          <div class="row form-group">
+                            <div class="col-sm-6">
+                                <label for="inputDegree">Degree</label>
+                                <input type="text" formControlName="inputDegree" name="DegreeIN"
+                                    placeholder="Degree" id="inputDegree" class="form-control"/>
+                            </div>
+                            <div class="col-sm-6">
+                                <label for="inputBatch">Batch</label>
+                                <input type="text" formControlName="inputBatch" name="BatchIN"
+                                    placeholder="Degree" id="inputBatch" class="form-control"/>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-sm-6">
+                                <label for="inputBranch">Branch</label>
+                                <input type="text" formControlName="inputBranch" name="BranchIN"
+                                    placeholder="Branch" id="inputBranch" class="form-control"/>
+                            </div>
+                            <div class="col-sm-6">
+                                <label for="inputCGPA">CGPA</label>
+                                <input type="text" formControlName="inputCGPA" name="CGPAIN"
+                                    placeholder="CGPA" id="inputCGPA" class="form-control"/>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-sm-6">
+                                <label for="input10th">10th Marks</label>
+                                <input type="text" formControlName="input10th" name="10thIN"
+                                    placeholder="10th Marks" id="input10th" class="form-control"/>
+                            </div>
+                            <div class="col-sm-6">
+                                <label for="input12th">12th Marks</label>
+                                <input type="text" formControlName="input12th" name="12thIN"
+                                    placeholder="12th Marks" id="input12th" class="form-control"/>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-sm-6">
+                                <label for="inputActive">Active Backlogs</label>
+                                <input type="text" formControlName="inputActive" name="ActiveIN"
+                                    placeholder="Active Backlogs" id="inputActive" class="form-control"/>
+                            </div>
+                            <div class="col-sm-6">
+                                <label for="inputDead">Dead Backlogs</label>
+                                <input type="text" formControlName="inputDead" name="DeadIN"
+                                    placeholder="Dead Backlogs" id="inputDead" class="form-control"/>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-sm-6">
+                                <label for="inputLink">Form Link</label>
+                                <input type="text" formControlName="inputLink" name="LinkIN"
+                                    placeholder="Form Link" id="inputLink" class="form-control"/>
+                            </div>
+                            <div class="col-sm-6">
+                                <label for="inputDeadline">Form Deadline</label>
+                                <input type="text" formControlName="inputDeadline" name="DeadlineIN"
+                                    placeholder="Form Deadline" id="inputDeadline" class="form-control"/>
+                            </div>
+                        </div>
 
-                          <div class="row mt-2">
-                              <div class="col-sm-6">
-                                  <button type="submit" class="btn btn-primary btn-block">
-                                      Add Drive
-                                  </button>
-                              </div>
-                              <div class="col-sm-6">
-                                  <button type="reset" class="btn btn-danger btn-block">
-                                      Reset
-                                  </button>
-                              </div>
-                          </div>
+                        <div class="row form-group">
+                            <div class="row mt-2">
+                                <div class="col-sm-6">
+                                    <button type="submit" class="btn btn-primary btn-block">
+                                        Create Placement Drive
+                                    </button>
+                                </div>
+                                <div class="col-sm-6">
+                                    <button type="reset" class="btn btn-danger btn-block">
+                                        Reset Placement Drive
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
 
                       </div>
                       <!-- Card body end-->
