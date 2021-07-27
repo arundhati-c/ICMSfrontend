@@ -21,10 +21,8 @@ export class LoginComponent implements OnInit {
 
 if (/@yahoo.com\s*$/.test(value)) {
    console.log("it ends in @yahoo");
-} 
+}
   }
-
   ngOnInit(): void {
   }
-
 }
