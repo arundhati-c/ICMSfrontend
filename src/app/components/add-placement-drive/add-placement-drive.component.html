@@ -20,13 +20,18 @@
                             <div class="row form-group">
                                 <div class="col-sm-6">
                                     <label for="inputTitle">Job Title</label>
-                                    <input type="text" formControlName="inputTitle" name="TitleIN"
-                                        placeholder="Job Title" id="inputTitle" class="form-control"/>
+                                    <input [id]="drive.jobTitle" type="text" formControlName="inputTitle" name="TitleIN"
+                                        placeholder="Job Title" class="form-control"/>
                                 </div>
                                 <div class="col-sm-6">
                                     <label for="inputType">Employment Type</label>
-                                    <input type="text" formControlName="inputType" name="TypeIN"
-                                        placeholder="Employment Type" id="inputType" class="form-control"/>
+                                    <input [id]="drive.employmentType" [(ngModel)]="drive.employmentType" type="text" formControlName="inputType" name="TypeIN"
+                                        placeholder="Employment Type" class="form-control"/>
+                                       
+                                </div>
+                                <div>
+                                    <label >Employment Type test</label>
+                                    <h3> {{drive.employmentType}}</h3>
                                 </div>
                             </div>
                             <div class="row form-group">

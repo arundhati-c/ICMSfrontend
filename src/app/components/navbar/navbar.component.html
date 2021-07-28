@@ -6,29 +6,24 @@
   </a>
   <div class="collapse navbar-collapse" id="navbar">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home</a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Company</a>
-      </li>
-      <li class="nav-item dropdown active">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-          aria-haspopup="true" aria-expanded="false">
-          Profile
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">View Profile</a>
-          <a class="dropdown-item" href="#">Change Password</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Logout</a>
-        </div>
-      </li>
-      <a routerLink = "/login"> Login </a>
-          <a routerLink = "/viewCompanies"> Companies</a>
-          <a routerLink = "/addCompany"> Add Company </a>
-          <a routerLink = "/viewDrives"> View drives </a>
-          <a routerLink = "/addDrive"> Add drive </a>
+      <li> <a class="nav-link" routerLink = "/login"> Login </a></li>
+      <li> <a class="nav-link" routerLink = "/viewCompanies"> Companies</a></li>
+      <li> <a class="nav-link" routerLink = "/addCompany"> Add Company </a></li>
+      <li> <a class="nav-link" routerLink = "/viewDrives"> View drives </a></li>
+      <li> <a class="nav-link" routerLink = "/addDrive"> Add drive </a></li>        
+         
+          <li class="nav-item dropdown active">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Profile
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">View Profile</a>
+              <a class="dropdown-item" href="#">Change Password</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Logout</a>
+            </div>
+          </li>
     </ul>
     <!-- <form class="d-flex">
       <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
