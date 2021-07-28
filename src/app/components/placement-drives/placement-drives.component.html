@@ -8,15 +8,23 @@
         <table class="table table-sm table-striped">
         <thead>
             <tr>
-                <th scope="col"></th>
                 <th scope="col">#</th>
                 <th scope="col">Company</th>
-                <th scope="col">Type</th>
+                <th scope="col">Job role</th>
                 <th scope="col">CGPA Criteria</th>
-                <th scope="col">Branches Applicable</th>
+                <th scope="col">Branches</th>
                 <th scope="col">Stipend</th>
                 <th scope="col">Form</th>
             </tr>
         </thead>
+        <tr *ngFor = "let drive of drives">
+            <td>{{drive.p_id}}</td>
+            <td>{{drive.name}}</td>
+            <td>{{drive.job_title}}</td>
+            <td>{{drive.min_cgpa}}</td>
+            <td>{{drive.branch}}</td>
+            <td>{{drive.stipend}}</td>
+            <td>{{drive.form_link}}</td>
+        </tr>
     </table>
   </div>

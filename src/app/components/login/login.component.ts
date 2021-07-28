@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { Validators } from '@angular/forms';
+import { IUser } from 'src/app/model/user';
 
 @Component({
   selector: 'app-login',
@@ -7,22 +10,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  constructor(private fb: FormBuilder) { }
 
-  name ="";
-  password ="";
+ 
+  user = new IUser('dhati@gmail.com', 'mysql');
 
-  logmessage(value:any){
-    console.log('Welcome ' + value);
-  }
+  profileForm = this.fb.group({
+      mail : ['',Validators.required],
+      password : ['', Validators.required],
+  });
 
-  validatemail(value:string){
-    var value = 'test@yahoo.com'
-
-if (/@yahoo.com\s*$/.test(value)) {
-   console.log("it ends in @yahoo");
-}
+  onSubmit() {
+    // TODO: Use EventEmitter with form value
+    console.warn(this.profileForm.value);
   }
   ngOnInit(): void {
+    
   }
 }

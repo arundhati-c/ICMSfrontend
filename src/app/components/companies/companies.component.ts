@@ -20,8 +20,8 @@ export class CompaniesComponent implements OnInit {
       this.companyService.getCompanies().subscribe(response => this.companyArr=response);
   }
 
-  onSelect(company : any){
-      this.router.navigate(['/viewCompanies', company.name])
+  onSelect(company : ICompany){
+     this.router.navigate(['/viewCompanies', company])
   }
 
 }

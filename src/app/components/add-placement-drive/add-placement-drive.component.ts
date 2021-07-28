@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ICompany } from 'src/app/model/company';
 import { IPlacementDrive } from 'src/app/model/placementDrive';
+import { CompanyService } from 'src/app/services/company.service';
 import { PlacementDrivesComponent } from '../placement-drives/placement-drives.component';
 
 @Component({
@@ -10,6 +12,9 @@ import { PlacementDrivesComponent } from '../placement-drives/placement-drives.c
 export class AddPlacementDriveComponent implements OnInit {
 
   drive0? : IPlacementDrive;
+
+  companyArr? : ICompany[]; 
+  names? : string[];
 
   drive = {
     pId : 0,
@@ -37,9 +42,10 @@ export class AddPlacementDriveComponent implements OnInit {
     formDeadline : null,
     formRemarks : null
   }
-  constructor() { }
+  constructor(private companyService : CompanyService) { }
 
   ngOnInit(): void {
+    this.companyService.getCompanies().subscribe(response => this.companyArr=response);
   }
 
 }

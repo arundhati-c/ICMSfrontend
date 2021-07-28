@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { IPlacementDrive } from 'src/app/model/placementDrive';
+import { PlacementDriveService } from 'src/app/services/placement-drive.service';
 
 @Component({
   selector: 'app-placement-drives',
@@ -7,9 +10,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PlacementDrivesComponent implements OnInit {
 
-  constructor() { }
+  drives? : IPlacementDrive[];
+
+  constructor(
+    private driveService: PlacementDriveService,
+    private router: Router) { }
 
   ngOnInit(): void {
+    this.driveService.getDrives().subscribe(response => this.drives=response);
   }
 
 }

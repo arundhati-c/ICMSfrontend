@@ -1,7 +1,8 @@
-export interface IUser{
-    id : number,
-    name : string,
-    contact : string,
-    mail : string,
-    password : string
+export class IUser{
+    mail? : string;
+    password? : string;
+    constructor(
+        mail : string,
+        password : string
+        ){}
 }
