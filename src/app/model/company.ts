@@ -1,10 +1,8 @@
 export class ICompany{
-    id!: number;
-    name!: string;
-    website!: string;
-    description!: string;
-
-    constructor(){
-
-    }
+    constructor(
+        public id : number,
+        public name : string,
+        public website : string,
+        public description : string
+    ){ }
 }

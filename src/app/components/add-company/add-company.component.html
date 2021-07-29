@@ -1,85 +1,31 @@
-<!-- Page Start -->
-<div class="container">
-  <!-- Page Title Start -->
-
-  <div class="row">
-    <div class="col-sm-12"><br>
-      <h2>Company Details</h2>
-      <p class="hint-text">Register the company with placement cell</p>
+<div class="container-fluid">
+  <h1>Register a company</h1>
+  <form #companyForm="ngForm">
+    {{companyForm.value | json}}
+<hr>
+    {{companyModel | json}}
+    <div class="form-group">
+      <label>Id</label>
+      <input type="text" class="form-control" name="companyId" [(ngModel)]='companyModel.id'>
     </div>
-  </div><br>
 
-  <!-- Page Title End -->
-  <!-- Page Body Start -->
-  <!-- Company Details start -->
-
-  <div>
-
-    <div class="card">
-
-      <div class="form-group">
-
-        <!-- Card header start -->
-        <div class="card-header" id="headingCompanyDetails">
-          <h4>Company Details</h4>
-        </div>
-        <!-- Card header end -->
-
-        <!-- Collapse Body start-->
-        <div id="collapseCompanyDetails" class="collapse show" data-parent="#accordionCompany">
-
-          <!-- Card body start-->
-          <div class="card-body">
-            <!--[formGroup] = "uploadForm"-->
-            <form  (ngSubmit)="onSubmit()">
-
-              <div class="row form-group">
-                <div class="col-sm-6">
-                  <label for="inputCompanyName">Company Name</label>
-                  <input type="text" formControlName="inputCompanyName" name="companyName" id="inputCompanyName"
-                    placeholder="Company Name" class="form-control" />
-
-                  <label for="inputCompanyWebsite">Company Website</label>
-                  <input type="text" formControlName="inputCompanyName" name="companyWebsite" id="inputCompanyName"
-                    placeholder="Company Website" class="form-control" />
-                </div>
-              </div>
-
-              <div class="row form-group">
-                <div class="col-sm-6">
-                  <label for="inputDescription">Description</label>
-                  <textarea name="description" formControlName="inputDescription"
-                    id="inputRequirementDescription" class="form-control " placeholder="Description"
-                    rows="2">
-                  </textarea>
-
-                </div>
-
-                <div class="row">
-                  <div class="col-sm-6">
-                    <button type="submit" class="btn btn-primary btn-block">
-                      Add Company
-                    </button>
-                  </div>
-                  <div class="col-sm-6">
-                    <button type="reset" class="btn btn-danger btn-block">
-                      Reset
-                    </button>
-                  </div>
-                </div>
-              </div>
-
-            </form>
-
-            <!-- Card body end-->
-          </div>
-          <!-- Collapse body end-->
-        </div>
-        <!--form group end-->
-      </div>
-      <!-- Accordion Company Details card end-->
+    <div class="form-group">
+      <label>Name</label>
+      <input type="text" class="form-control" name="companyName" [(ngModel)]='companyModel.name'>
     </div>
-    <!-- Accordian Company Details end-->
-    <!-- Page Body end -->
-  </div>
-  <!-- Page End -->
+
+    <div class="form-group">
+      <label>Website</label>
+      <input type="text" class="form-control" name="companyWebsite" [(ngModel)]='companyModel.website'>
+    </div>
+
+    <div class="form-group">
+      <label>Description</label>
+      <input type="text" class="form-control" name="companyDescription" [(ngModel)]='companyModel.description'>
+    </div>
+<br>
+    <button class="btn-primary" type="submit">Submit</button>
+
+  </form>
+
+</div>

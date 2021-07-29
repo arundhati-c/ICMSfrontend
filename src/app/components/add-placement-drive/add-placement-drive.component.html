@@ -1,138 +1,27 @@
-<div class="container">
-  <div class="row">
-      <div class="col-sm-12">
-          <h1>Enter Job Details</h1>
-          <p class="hint-text">Please fill the required job details information.</p>
+<div class="container-fluid">
+    <h1>Register a company</h1>
+  
+    <form action="">
+      <div class="form-group">
+        <label>Id</label>
+        <input type="text" class="form-control">
       </div>
+  
+      <div class="form-group">
+        <label>Name</label>
+        <input type="text" class="form-control">
+      </div>
+  
+      <div class="form-group">
+        <label>Website</label>
+        <input type="text" class="form-control">
+      </div>
+  
+      <div class="form-group">
+        <label>Description</label>
+        <input type="text" class="form-control">
+      </div>
+  
+    </form>
+  
   </div>
-  <form>
-      <div class="accordion md-accordion" id="accordionCompany">
-          <div class="card">
-              <div class="form-group">
-                  <div class="card-header" id="headingCompanyDetails">
-                      <a data-toggle="collapse" data-parent="#accordionCompany" href="#collapseCompanyDetails">
-                          <h4>Company Details</h4>
-                      </a>
-                  </div>
-                  <div id="collapseCompanyDetails" class="collapse show" data-parent="#accordionCompany">
-                      <div class="card-body">
-                        <div class="row form-group">
-                            <div class="row form-group">
-                                <div class="col-sm-6">
-                                    <label for="inputTitle">Job Title</label>
-                                    <input [id]="drive.jobTitle" type="text" formControlName="inputTitle" name="TitleIN"
-                                        placeholder="Job Title" class="form-control"/>
-                                </div>
-                                <div class="col-sm-6">
-                                    <label for="inputType">Employment Type</label>
-                                    <input [id]="drive.employmentType" [(ngModel)]="drive.employmentType" type="text" formControlName="inputType" name="TypeIN"
-                                        placeholder="Employment Type" class="form-control"/>
-                                       
-                                </div>
-                            </div>
-                            <div class="row form-group">
-                              <div class="col-sm-6">
-                                  <label for="inputStipend">Stipend</label>
-                                  <input type="text" formControlName="inputStipend" name="StipendIN"
-                                      placeholder="Stipend" id="inputStipend" class="form-control"/>
-                              </div>
-                              <div class="col-sm-6">
-                                  <label for="inputJobDescription">Job Description</label>
-                                  <textarea name="jobDescription"
-                                      formControlName="inputJobDescription" id="inputJobDescription"
-                                      class="form-control " placeholder="Job Description" rows="2">
-                                  </textarea>
-                              </div>
-                          </div>
-                          <div class="row form-group">
-                            <div class="col-sm-6">
-                                <label for="inputDegree">Degree</label>
-                                <input type="text" formControlName="inputDegree" name="DegreeIN"
-                                    placeholder="Degree" id="inputDegree" class="form-control"/>
-                            </div>
-                            <div class="col-sm-6">
-                                <label for="inputBatch">Batch</label>
-                                <input type="text" formControlName="inputBatch" name="BatchIN"
-                                    placeholder="Batch" id="inputBatch" class="form-control"/>
-                            </div>
-                        </div>
-                        <div class="row form-group">
-                            <div class="col-sm-6">
-                                <label for="inputBranch">Branch</label>
-                                <input type="text" formControlName="inputBranch" name="BranchIN"
-                                    placeholder="Branch" id="inputBranch" class="form-control"/>
-                            </div>
-                            <div class="col-sm-6">
-                                <label for="inputCGPA">CGPA</label>
-                                <input type="text" formControlName="inputCGPA" name="CGPAIN"
-                                    placeholder="CGPA" id="inputCGPA" class="form-control"/>
-                            </div>
-                        </div>
-                        <div class="row form-group">
-                            <div class="col-sm-6">
-                                <label for="input10th">10th Marks</label>
-                                <input type="text" formControlName="input10th" name="10thIN"
-                                    placeholder="10th Marks" id="input10th" class="form-control"/>
-                            </div>
-                            <div class="col-sm-6">
-                                <label for="input12th">12th Marks</label>
-                                <input type="text" formControlName="input12th" name="12thIN"
-                                    placeholder="12th Marks" id="input12th" class="form-control"/>
-                            </div>
-                        </div>
-                        <div class="row form-group">
-                            <div class="col-sm-6">
-                                <label for="inputActive">Active Backlogs</label>
-                                <input type="text" formControlName="inputActive" name="ActiveIN"
-                                    placeholder="Active Backlogs" id="inputActive" class="form-control"/>
-                            </div>
-                            <div class="col-sm-6">
-                                <label for="inputDead">Dead Backlogs</label>
-                                <input type="text" formControlName="inputDead" name="DeadIN"
-                                    placeholder="Dead Backlogs" id="inputDead" class="form-control"/>
-                            </div>
-                        </div>
-                        <div class="row form-group">
-                          <div class="col-sm-6">
-                              <label for="inputGap">Education Gap</label>
-                              <input type="number" formControlName="inputGap" name="GapIN"
-                                  placeholder="Education Gap" id="inputGap" class="form-control"/>
-                          </div>
-                          <div class="col-sm-6">
-                              <label for="inputExp">Years of Experience Required</label>
-                              <input type="number" formControlName="inputExp" name="ExpIN"
-                                  placeholder="Years of Experience Required" id="inputExp" class="form-control"/>
-                          </div>
-                      </div>
-                        <div class="row form-group">
-                            <div class="col-sm-6">
-                                <label for="inputLink">Form Link</label>
-                                <input type="text" formControlName="inputLink" name="LinkIN"
-                                    placeholder="Form Link" id="inputLink" class="form-control"/>
-                            </div>
-                            <div class="col-sm-6">
-                                <label for="inputDeadline">Form Deadline</label>
-                                <input type="text" formControlName="inputDeadline" name="DeadlineIN"
-                                    placeholder="Form Deadline" id="inputDeadline" class="form-control"/>
-                            </div>
-                        </div>
-                        <div class="row form-group">
-                            <div class="row mt-2">
-                                <div class="col-sm-6">
-                                    <button type="submit" class="btn btn-primary btn-block">
-                                        Create Placement Drive
-                                    </button>
-                                </div>
-                                <div class="col-sm-6">
-                                    <button type="reset" class="btn btn-danger btn-block">
-                                        Reset Placement Drive
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-</div>
