@@ -1,27 +1,128 @@
 <div class="container-fluid">
-    <h1>Register a company</h1>
-  
-    <form action="">
-      <div class="form-group">
-        <label>Id</label>
-        <input type="text" class="form-control">
-      </div>
-  
-      <div class="form-group">
-        <label>Name</label>
-        <input type="text" class="form-control">
-      </div>
-  
-      <div class="form-group">
-        <label>Website</label>
-        <input type="text" class="form-control">
-      </div>
-  
-      <div class="form-group">
-        <label>Description</label>
-        <input type="text" class="form-control">
-      </div>
-  
-    </form>
-  
-  </div>
+  <h1>Create a new drive</h1>
+  <form #companyForm="ngForm" (ngSubmit)="onSubmit()" novalidate>
+
+    <div class="form-group">
+      <label>Id</label>
+      <input type="text" class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label>Company</label>
+      <input type="text" class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label>Employment Type</label>
+      <select class="custom-select">
+        <option selected>Internship</option>
+        <option >Full Time</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Job role</label>
+      <input type="text" class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label>Job Description</label>
+      <input type="text" class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label>Stipend</label>
+      <input type="text" class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label>Location</label>
+      <input type="text" class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label>Duration</label>
+      <input type="text" class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label>Degree</label>
+      <input type="text" class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label>Batches</label>
+      <input type="text" class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label>Branches</label>
+      <input type="text" class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label>CGPA criteria</label>
+      <input type="text" class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label>Minimum X Score/Grade</label>
+      <input type="text" class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label>Minimum XII Score/Grade</label>
+      <input type="text" class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label>Minimum Diploma Score/Grade</label>
+      <input type="text" class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label>Active Backlogs</label>
+      <input type="text" class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label>Dead Backlogs</label>
+      <input type="text" class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label>Maximum Education Gap in degree</label>
+      <input type="text" class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label>Required Skills</label>
+      <input type="text" class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label>Optional Skills</label>
+      <input type="text" class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label>Requirement Remarks</label>
+      <input type="text" class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label>Application Form Link</label>
+      <input type="text" class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label>Application Form Deadline</label>
+      <input type="text" class="form-control">
+    </div>
+
+    <br>
+    <button class="btn-primary" type="submit">Submit</button>
+
+  </form>
+
+</div>

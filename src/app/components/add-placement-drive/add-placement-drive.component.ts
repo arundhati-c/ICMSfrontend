@@ -1,8 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ICompany } from 'src/app/model/company';
 import { IPlacementDrive } from 'src/app/model/placementDrive';
-import { CompanyService } from 'src/app/services/company.service';
-import { PlacementDrivesComponent } from '../placement-drives/placement-drives.component';
 
 @Component({
   selector: 'app-add-placement-drive',
@@ -11,41 +8,39 @@ import { PlacementDrivesComponent } from '../placement-drives/placement-drives.c
 })
 export class AddPlacementDriveComponent implements OnInit {
 
-  drive0? : IPlacementDrive;
+  driveModel = new IPlacementDrive(
+    3,
+    'HSBC',
+    'Internship',
+    'Frontend Developer',
+    'Work with Java in products department',
+    '30400',
+    'Pune',
+    '8 weeks',
+    'B.tech.',
+    '2022',
+    'Comp, IT',
+    '6.0',
+    '60%',
+    '60%',
+    '6.0',
+    0,
+    0,
+    0,
+    'HTML',
+    'CSS',
+    '',
+    'www.form-hsbc.com',
+    '25 june'
+  )
 
-  companyArr? : ICompany[]; 
-  names? : string[];
+    employmentType = ['Full Time', 'Internship']
 
-  drive = {
-    pId : 0,
-    cName : null,
-    employmentType : null,
-    jobTitle : null,
-    jobDescription : null,
-    stipend : null,
-    location : null,
-    duration : null,
-    degree : null,
-    batch : null,
-    branch : null,
-    minCgpa : null,
-    minXMarks : null,
-    minXiiMarks : null,
-    minDiplomaCgpa : null,
-    activeBacklogs : 0,
-    deadBacklogs : 0,
-    gapYears : 0,
-    requiredSkills : null,
-    optionalSkills : null,
-    requirementRemarks : null,
-    formLink : null,
-    formDeadline : null,
-    formRemarks : null
-  }
-  constructor(private companyService : CompanyService) { }
+  constructor() { }
 
   ngOnInit(): void {
-    this.companyService.getCompanies().subscribe(response => this.companyArr=response);
+    
   }
 
+  onSubmit(){}
 }

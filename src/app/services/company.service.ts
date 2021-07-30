@@ -29,9 +29,9 @@ export class CompanyService {
     return this.http.get<ICompany>(`${this.base_url+this._url}/${id}`);
   }
 
-  addCompany(c : ICompany):Observable<ICompany>{
+  addCompany(c : ICompany){
     this._url = '';
-    return this.http.post<ICompany>(this.base_url+this._url, c);
+    return this.http.post<any>(this.base_url, c);
   }
 
   updateCompany(name:String, c:ICompany) : Observable<ICompany>{

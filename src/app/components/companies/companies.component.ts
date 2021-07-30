@@ -17,7 +17,9 @@ export class CompaniesComponent implements OnInit {
     private router: Router) { }
 
   ngOnInit(): void {
-      this.companyService.getCompanies().subscribe(response => this.companyArr=response);
+      this.companyService.getCompanies().subscribe(
+        response => this.companyArr=response,
+        err => console.error('Error!!', err));
   }
 
   onSelect(company : ICompany){
