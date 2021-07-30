@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { IPlacementDrive } from 'src/app/model/placementDrive';
+import { PlacementDriveService } from 'src/app/services/placement-drive.service';
 
 @Component({
   selector: 'app-add-placement-drive',
@@ -12,8 +13,8 @@ export class AddPlacementDriveComponent implements OnInit {
     3,
     'HSBC',
     'Internship',
-    'Frontend Developer',
-    'Work with Java in products department',
+    'Frontend Intern',
+    'Work with JAngular in products department',
     '30400',
     'Pune',
     '8 weeks',
@@ -34,13 +35,18 @@ export class AddPlacementDriveComponent implements OnInit {
     '25 june'
   )
 
-    employmentType = ['Full Time', 'Internship']
+//    employmentType = ['Full Time', 'Internship']
 
-  constructor() { }
+  constructor(private driveService: PlacementDriveService) { }
 
   ngOnInit(): void {
     
   }
 
-  onSubmit(){}
+  onSubmit(){
+    this.driveService.addPlacementDrive(this.driveModel).subscribe(
+      data => console.log('Success!!!', data),
+      err => console.error('Error!!', err)
+    )
+  }
 }

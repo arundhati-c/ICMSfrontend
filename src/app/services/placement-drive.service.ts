@@ -23,9 +23,9 @@ export class PlacementDriveService {
     return this.http.get<IPlacementDrive>(`${this.base_url+this._url}/${id}`);
   }
 
-  addPlacementDrive(p : IPlacementDrive) : Observable<IPlacementDrive>{
+  addPlacementDrive(p : IPlacementDrive) {
     this._url = '';
-    return this.http.post<IPlacementDrive>(this._url, p);
+    return this.http.post<any>(this.base_url, p);
   }
 
   updatePlacementDrive(name:String, p:IPlacementDrive) : Observable<IPlacementDrive>{

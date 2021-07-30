@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ICompany } from 'src/app/model/company';
-import { FormBuilder, FormGroup, FormsModule } from '@angular/forms';
-import { HttpClient } from '@angular/common/http';
 import { CompanyService } from 'src/app/services/company.service';
 
 
@@ -12,13 +10,12 @@ import { CompanyService } from 'src/app/services/company.service';
 })
 export class AddCompanyComponent implements OnInit {
 
-  companyModel = new ICompany(1,'avaya', 'avaya.com', 'avaya is noice');
+  companyModel = new ICompany(0,'', '', '');
   submitted = false;
   constructor(private companyService: CompanyService) { }
 
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {  }
   onSubmit() { 
     this.submitted = true;
     this.companyService.addCompany(this.companyModel).subscribe(

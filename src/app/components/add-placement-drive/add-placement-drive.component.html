@@ -1,123 +1,128 @@
 <div class="container-fluid">
   <h1>Create a new drive</h1>
-  <form #companyForm="ngForm" (ngSubmit)="onSubmit()" novalidate>
+  <form #driveForm="ngForm" (ngSubmit)="onSubmit()" novalidate>
 
     <div class="form-group">
       <label>Id</label>
-      <input type="text" class="form-control">
+      <input type="text" class="form-control" name="driveId" [(ngModel)]='driveModel.p_id'>
     </div>
 
     <div class="form-group">
       <label>Company</label>
-      <input type="text" class="form-control">
+      <input type="text" class="form-control" name="driveCompany" [(ngModel)]='driveModel.name'>
     </div>
 
-    <div class="form-group">
+    <!-- <div class="form-group">
       <label>Employment Type</label>
       <select class="custom-select">
         <option selected>Internship</option>
         <option >Full Time</option>
       </select>
+    </div> -->
+
+    <div class="form-group">
+      <label>Employment type</label>
+      <input type="text" class="form-control" name="driveEType" [(ngModel)]='driveModel.employment_type'>
     </div>
 
     <div class="form-group">
       <label>Job role</label>
-      <input type="text" class="form-control">
+      <input type="text" class="form-control" name="driveTitle" [(ngModel)]='driveModel.job_title'>
     </div>
 
     <div class="form-group">
       <label>Job Description</label>
-      <input type="text" class="form-control">
+      <input type="text" class="form-control" name="driveJD" [(ngModel)]='driveModel.job_description'>
     </div>
 
     <div class="form-group">
       <label>Stipend</label>
-      <input type="text" class="form-control">
+      <input type="text" class="form-control" name="driveStipend" [(ngModel)]='driveModel.stipend'>
     </div>
 
     <div class="form-group">
       <label>Location</label>
-      <input type="text" class="form-control">
+      <input type="text" class="form-control" name="driveLocation" [(ngModel)]='driveModel.location'>
     </div>
 
     <div class="form-group">
       <label>Duration</label>
-      <input type="text" class="form-control">
+      <input type="text" class="form-control" name="driveDuration" [(ngModel)]='driveModel.duration'>
     </div>
 
     <div class="form-group">
       <label>Degree</label>
-      <input type="text" class="form-control">
+      <input type="text" class="form-control" name="driveDegree" [(ngModel)]='driveModel.degree'>
     </div>
 
     <div class="form-group">
       <label>Batches</label>
-      <input type="text" class="form-control">
+      <input type="text" class="form-control" name="driveBatch" [(ngModel)]='driveModel.batch'>
     </div>
 
     <div class="form-group">
       <label>Branches</label>
-      <input type="text" class="form-control">
+      <input type="text" class="form-control" name="driveBranch" [(ngModel)]='driveModel.branch'>
     </div>
 
     <div class="form-group">
       <label>CGPA criteria</label>
-      <input type="text" class="form-control">
+      <input type="text" class="form-control" name="driveCgpa" [(ngModel)]='driveModel.min_cgpa'>
     </div>
 
     <div class="form-group">
       <label>Minimum X Score/Grade</label>
-      <input type="text" class="form-control">
+      <input type="text" class="form-control" name="driveX" [(ngModel)]='driveModel.min_X_marks'>
     </div>
 
     <div class="form-group">
       <label>Minimum XII Score/Grade</label>
-      <input type="text" class="form-control">
+      <input type="text" class="form-control" name="driveXII" [(ngModel)]='driveModel.min_Xii_marks'>
     </div>
 
     <div class="form-group">
       <label>Minimum Diploma Score/Grade</label>
-      <input type="text" class="form-control">
+      <input type="text" class="form-control" name="driveDiploma" [(ngModel)]='driveModel.diploma_cgpa'>
     </div>
 
     <div class="form-group">
       <label>Active Backlogs</label>
-      <input type="text" class="form-control">
+      <input type="text" class="form-control" name="driveActiveB" [(ngModel)]='driveModel.active_backlogs'>
     </div>
 
     <div class="form-group">
       <label>Dead Backlogs</label>
-      <input type="text" class="form-control">
+      <input type="text" class="form-control" name="driveDeadB" [(ngModel)]='driveModel.dead_backlogs'>
     </div>
 
     <div class="form-group">
-      <label>Maximum Education Gap in degree</label>
-      <input type="text" class="form-control">
+      <label>Gap years</label>
+      <input type="text" class="form-control" name="driveGapY" [(ngModel)]='driveModel.gap_years'>
     </div>
 
     <div class="form-group">
       <label>Required Skills</label>
-      <input type="text" class="form-control">
+      <input type="text" class="form-control" name="driveReqSkills" [(ngModel)]='driveModel.required_skills'>
     </div>
 
     <div class="form-group">
       <label>Optional Skills</label>
-      <input type="text" class="form-control">
+      <input type="text" class="form-control" name="driveOptSkills" [(ngModel)]='driveModel.optional_skills'>
     </div>
 
     <div class="form-group">
       <label>Requirement Remarks</label>
-      <input type="text" class="form-control">
+      <input type="text" class="form-control" name="driveReqRemarks" [(ngModel)]='driveModel.requirement_remarks'>
     </div>
 
     <div class="form-group">
       <label>Application Form Link</label>
-      <input type="text" class="form-control">
+      <input type="text" class="form-control" name="driveFormLink" [(ngModel)]='driveModel.form_link'>
     </div>
 
     <div class="form-group">
       <label>Application Form Deadline</label>
-      <input type="text" class="form-control">
+      <input type="text" class="form-control" name="driveFormDeadline" [(ngModel)]='driveModel.form_deadline'>
     </div>
 
     <br>
