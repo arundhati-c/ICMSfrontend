@@ -9,6 +9,7 @@ import { PlacementDriveService } from 'src/app/services/placement-drive.service'
 })
 export class AddPlacementDriveComponent implements OnInit {
 
+  displayMessage = '';
   driveModel = new IPlacementDrive(
     3,
     'HSBC',
@@ -45,8 +46,14 @@ export class AddPlacementDriveComponent implements OnInit {
 
   onSubmit(){
     this.driveService.addPlacementDrive(this.driveModel).subscribe(
-      data => console.log('Success!!!', data),
-      err => console.error('Error!!', err)
+      data => {
+        console.log('Success!!!', data);
+        this.displayMessage = 'Success!';
+      },
+      err => {
+        console.error('Error!!', err);
+        this.displayMessage = 'Request could not be completed!';
+    }
     )
   }
 }

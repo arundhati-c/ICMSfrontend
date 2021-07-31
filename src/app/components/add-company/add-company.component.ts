@@ -10,6 +10,7 @@ import { CompanyService } from 'src/app/services/company.service';
 })
 export class AddCompanyComponent implements OnInit {
 
+  displayMessage = '';
   companyModel = new ICompany(0,'', '', '');
   submitted = false;
   constructor(private companyService: CompanyService) { }
@@ -19,8 +20,14 @@ export class AddCompanyComponent implements OnInit {
   onSubmit() { 
     this.submitted = true;
     this.companyService.addCompany(this.companyModel).subscribe(
-      data => console.log('Success!!!', data),
-      err => console.error('Error!!', err)
+      data => {
+        console.log('Success!!!', data);
+        this.displayMessage = 'Success!';
+      },
+      err => {
+        console.error('Error!!', err);
+        this.displayMessage = 'Request could not be completed!';
+    }
     )
   }
 
