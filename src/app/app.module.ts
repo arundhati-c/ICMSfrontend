@@ -9,8 +9,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { CompanyDetailsComponent } from './components/company-details/company-details.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 
-
-
 @NgModule({
   declarations: [
     AppComponent,

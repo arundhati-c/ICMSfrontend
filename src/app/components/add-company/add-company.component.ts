@@ -13,10 +13,16 @@ export class AddCompanyComponent implements OnInit {
   displayMessage = '';
   companyModel = new ICompany(0,'', '', '');
   submitted = false;
+
+  companies?:ICompany[]
+  len? : number;
   constructor(private companyService: CompanyService) { }
 
 
-  ngOnInit(): void {  }
+  ngOnInit(): void { 
+    this.companyService.getCompanies().subscribe(data => this.companies = data)
+  //  len = this.companies?.length ?this.companies?.length : 0;
+   }
   onSubmit() { 
     this.submitted = true;
     this.companyService.addCompany(this.companyModel).subscribe(

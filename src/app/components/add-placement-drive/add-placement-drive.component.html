@@ -1,132 +1,209 @@
-<div class="container-fluid">
-  <h1>Create a new drive</h1>
+<div class="container">
+  <div class="col-sm-12"><br>
+  <h2>Create a new drive</h2>
+</div>
   <form #driveForm="ngForm" (ngSubmit)="onSubmit()" novalidate>
-
+    
+    <div class=" row col-sm-6">
     <div class="form-group">
       <label>Id</label>
       <input type="text" required #id="ngModel" [class.is-invalid]="id.invalid && id.touched" class="form-control" name="driveId" [(ngModel)]='driveModel.p_id'>
+      <div *ngIf="id.errors && (id.invalid||id.touched)">
+        <small class="text-danger">Required!</small>
+      </div>
     </div>
+  </div><br>
 
+  <!-- <div class="col-sm-6">
     <div class="form-group">
       <label>Company</label>
       <input type="text" required #name="ngModel" [class.is-invalid]="name.invalid && name.touched" class="form-control" name="driveCompany" [(ngModel)]='driveModel.name'>
+      <div *ngIf="name.errors && (name.invalid && name.touched)">
+        <small class="text-danger">Required!</small>
+      </div>
     </div>
+  </div><br> -->
 
-    <!-- <div class="form-group">
-      <label>Employment Type</label>
-      <select class="custom-select">
-        <option selected>Internship</option>
-        <option >Full Time</option>
-      </select>
-    </div> -->
-
+  <div class="col-sm-6">
     <div class="form-group">
-      <label>Employment type</label>
-      <input type="text" required #roletype="ngModel" [class.is-invalid]="roletype.invalid && roletype.touched" class="form-control" name="driveEType" [(ngModel)]='driveModel.employment_type'>
+      <div class="col-sm-6">
+      <label>Company</label>
     </div>
+      <select class="custom-select">
+        <option value="" selected="selected">Select...</option>
+        <option *ngFor="let company of companies">{{company.name}}</option>
+      </select>
+    </div>
+  </div><br>
 
+  <div class="col-sm-6">
+    <div class="form-group">
+      <div class="col-sm-6">
+      <label>Employment Type</label>
+    </div>
+      <select class="custom-select">
+        <option value="Internship" selected="selected">Internship</option>
+        <option value="Full time" >Full Time</option>
+      </select>
+    </div>
+  </div><br>
+<!-- 
+    <div class="col-sm-6">
+    <div class="form-group">
+      <br> <label>Employment type</label>
+      <input type="text" required #roletype="ngModel" [class.is-invalid]="roletype.invalid && roletype.touched" class="form-control" name="driveEType" [(ngModel)]='driveModel.employment_type'>
+      <div *ngIf="roletype.errors && (roletype.invalid||roletype.touched)">
+        <small class="text-danger">Required!</small>
+      </div>
+    </div>
+  </div><br> -->
+
+    <div class="col-sm-6">
     <div class="form-group">
       <label>Job role</label>
       <input type="text" required #rolename="ngModel" [class.is-invalid]="rolename.invalid && rolename.touched" class="form-control" name="driveTitle" [(ngModel)]='driveModel.job_title'>
+      <div *ngIf="rolename.errors && (rolename.invalid||rolename.touched)">
+        <small class="text-danger">Required!</small>
+      </div>
     </div>
+  </div><br>
 
+    <div class="col-sm-6">
     <div class="form-group">
       <label>Job Description</label>
       <input type="text" class="form-control" name="driveJD" [(ngModel)]='driveModel.job_description'>
     </div>
+  </div><br>
 
+  <div class="col-sm-6">
     <div class="form-group">
       <label>Stipend</label>
       <input type="text" required #stipend="ngModel" [class.is-invalid]="stipend.invalid && stipend.touched" class="form-control" name="driveStipend" [(ngModel)]='driveModel.stipend'>
+      <div *ngIf="stipend.errors && (stipend.invalid&&stipend.touched)">
+        <small class="text-danger">Required!</small>
+      </div>
     </div>
+  </div><br>
 
+  <div class="col-sm-6">
     <div class="form-group">
       <label>Location</label>
       <input type="text" class="form-control" name="driveLocation" [(ngModel)]='driveModel.location'>
     </div>
+  </div><br>
 
+  <div class="col-sm-6">
     <div class="form-group">
       <label>Duration</label>
       <input type="text" class="form-control" name="driveDuration" [(ngModel)]='driveModel.duration'>
-    </div>
+    </div> </div><br>
 
+    <div class="col-sm-6">
     <div class="form-group">
       <label>Degree</label>
       <input type="text" required #degree="ngModel" [class.is-invalid]="degree.invalid && degree.touched" class="form-control" name="driveDegree" [(ngModel)]='driveModel.degree'>
-    </div>
+      <div *ngIf="degree.errors && (degree.invalid||degree.touched)">
+        <small class="text-danger">Required!</small>
+      </div>
+    </div></div><br>
 
+    <div class="col-sm-6">
     <div class="form-group">
       <label>Batches</label>
       <input type="text" required #batch="ngModel" [class.is-invalid]="batch.invalid && batch.touched"  class="form-control" name="driveBatch" [(ngModel)]='driveModel.batch'>
-    </div>
+      <div *ngIf="batch.errors && (batch.invalid||batch.touched)">
+        <small class="text-danger">Required!</small>
+      </div>
+    </div></div><br>
 
+    <div class="col-sm-6">
     <div class="form-group">
       <label>Branches</label>
       <input type="text" required #branch="ngModel" [class.is-invalid]="branch.invalid && branch.touched"  class="form-control" name="driveBranch" [(ngModel)]='driveModel.branch'>
-    </div>
+      <div *ngIf="branch.errors && (branch.invalid||branch.touched)">
+        <small class="text-danger">Required!</small>
+      </div>
+    </div></div><br>
 
+    <div class="col-sm-6">
     <div class="form-group">
       <label>CGPA criteria</label>
       <input type="text" required #cgpa="ngModel" [class.is-invalid]="cgpa.invalid && cgpa.touched" class="form-control" name="driveCgpa" [(ngModel)]='driveModel.min_cgpa'>
-    </div>
+      <div *ngIf="cgpa.errors && (cgpa.invalid||cgpa.touched)">
+        <small class="text-danger">Required!</small>
+      </div>
+    </div></div><br>
 
+    <div class="col-sm-6">
     <div class="form-group">
       <label>Minimum X Score/Grade</label>
       <input type="text" class="form-control" name="driveX" [(ngModel)]='driveModel.min_X_marks'>
     </div>
+  </div><br>
 
+  <div class="col-sm-6">
     <div class="form-group">
       <label>Minimum XII Score/Grade</label>
       <input type="text" class="form-control" name="driveXII" [(ngModel)]='driveModel.min_Xii_marks'>
     </div>
+  </div><br>
 
+  <div class="col-sm-6">
     <div class="form-group">
       <label>Minimum Diploma Score/Grade</label>
       <input type="text" class="form-control" name="driveDiploma" [(ngModel)]='driveModel.diploma_cgpa'>
-    </div>
+    </div></div><br>
 
+    <div class="col-sm-6">
     <div class="form-group">
       <label>No. of Active Backlogs Allowed</label>
       <input type="text" class="form-control" name="driveActiveB" [(ngModel)]='driveModel.active_backlogs'>
-    </div>
+    </div></div><br>
 
+    <div class="col-sm-6">
     <div class="form-group">
       <label>No. of Dead Backlogs Allowed</label>
       <input type="text" class="form-control" name="driveDeadB" [(ngModel)]='driveModel.dead_backlogs'>
-    </div>
+    </div></div><br>
 
+    <div class="col-sm-6">
     <div class="form-group">
       <label>No. of Gap years allowed</label>
       <input type="text" class="form-control" name="driveGapY" [(ngModel)]='driveModel.gap_years'>
-    </div>
+    </div></div><br>
 
+    <div class="col-sm-6">
     <div class="form-group">
       <label>Required Skills</label>
       <input type="text" class="form-control" name="driveReqSkills" [(ngModel)]='driveModel.required_skills'>
-    </div>
+    </div></div><br>
 
+    <div class="col-sm-6">
     <div class="form-group">
       <label>Optional Skills</label>
       <input type="text" class="form-control" name="driveOptSkills" [(ngModel)]='driveModel.optional_skills'>
-    </div>
+    </div></div><br>
 
+    <div class="col-sm-6">
     <div class="form-group">
       <label>Requirement Remarks</label>
       <input type="text" class="form-control" name="driveReqRemarks" [(ngModel)]='driveModel.requirement_remarks'>
-    </div>
+    </div></div><br>
 
+    <div class="col-sm-6">
     <div class="form-group">
       <label>Application Form Link</label>
       <input type="text" class="form-control" name="driveFormLink" [(ngModel)]='driveModel.form_link'>
-    </div>
+    </div></div><br>
 
+    <div class="col-sm-6">
     <div class="form-group">
       <label>Application Form Deadline</label>
       <input type="text" class="form-control" name="driveFormDeadline" [(ngModel)]='driveModel.form_deadline'>
-    </div>
+    </div></div><br>
 
     <br>
-    <button class="btn-primary" type="submit">Submit</button>
+    <button [disabled]="driveForm.form.invalid" class="btn-primary" type="submit">Submit</button>
 
   </form>
   <h4>{{displayMessage}}</h4>

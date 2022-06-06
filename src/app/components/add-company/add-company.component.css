@@ -11,3 +11,7 @@
   table .btn{
     margin: 2px;
   }
+
+.calc{
+  display: none;
+}
